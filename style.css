@@ -1,0 +1,53 @@
+:root {
+    --bmw-blue: #1c69d4;
+    --m-light-blue: #81c4ff;
+    --m-red: #e7222e;
+    --background-gray: #262626;
+    --font-white: #f6f6f6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: var(--font-white);
+}
+
+body {
+    background-color: var(--background-gray);
+}
+
+h1 {
+    width: 100%;
+    font-size: 10rem;
+    text-align: center;
+    letter-spacing: 1%;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+section > div {
+    width: 100%;
+    height: 25%;
+    background-color: var(--font-white);
+}
+
+#m-divider {
+    height: 25px;
+}
+
+.m-color-fade {
+    background: linear-gradient(
+        to right, 
+        var(--bmw-blue) 0%, 
+        var(--m-light-blue) 50%, 
+        var(--m-red) 100%
+    );
+}
