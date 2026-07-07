@@ -3,14 +3,15 @@
     --m-light-blue: #81c4ff;
     --m-red: #e7222e;
     --background-gray: #262626;
-    --font-white: #f6f6f6;
+    --font-light: #f6f6f6;
+    --font-dark: #515151;
 }
 
 * {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: var(--font-white);
+    color: var(--font-light);
 }
 
 body {
@@ -21,33 +22,67 @@ h1 {
     width: 100%;
     font-size: 10rem;
     text-align: center;
-    letter-spacing: 1%;
+    letter-spacing: 0.025rem;
 }
 
-section {
-    position: relative;
+#banner {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
-    width: 100%;
 }
 
-section > div {
+#banner > div {
+    position: relative;
     width: 100%;
-    height: 25%;
-    background-color: var(--font-white);
+    height: 50vh;
+    background-color: var(--font-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#m-divider {
+/* M-Colors-Divider */
+#banner > div::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     height: 25px;
-}
-
-.m-color-fade {
     background: linear-gradient(
-        to right, 
-        var(--bmw-blue) 0%, 
-        var(--m-light-blue) 50%, 
+        to right,
+        var(--bmw-blue) 0%,
+        var(--m-light-blue) 50%,
         var(--m-red) 100%
     );
+}
+
+#banner > div > h1 {
+    color: var(--font-dark);
+}
+
+section.vid  {
+    height: 1000vh;
+}
+
+
+section.vid div.holder {
+    position: sticky;
+    top: 0;
+    backface-visibility: hidden;
+}
+
+section.vid video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    will-change: transform;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
 }
