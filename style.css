@@ -25,6 +25,10 @@ h1 {
     letter-spacing: 0.025rem;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
 #banner {
     height: 100vh;
     display: flex;
@@ -76,9 +80,49 @@ section.vid div.holder {
 
 section.vid video {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     object-fit: cover;
     will-change: transform;
+}
+
+div.story {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div.info-card {
+    width: 450px;
+    position: relative;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+div.info-card h2 {
+    display: inline-block;
+    position: relative;
+}
+
+div.info-card h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: var(--bmw-blue);
+    transform: scaleX(0.5);
+    transform-origin: left;
+    margin-top: 8px;
+}
+
+
+div.info-card ul {
+    padding-left: 20px;
+}
+
+div.info-card li {
+    padding-top: 5px;
 }
 
 footer {
