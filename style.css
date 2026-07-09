@@ -135,16 +135,53 @@ h2 {
     background-color: rgba(246, 246, 246, 0.975);
 }
 
-.info-banner > h2 {
-    text-align: center;
+.info-banner h2 {
+    font-size: 4rem;
 }
 
-.info-banner h2, .info-banner div {
+.info-banner h2, .counter h3, .counter h4, .counter span{
+    text-align: center;
     color: var(--font-dark);
 }
 
-.flipping-number {
-    color: red;
+.counters {
+    padding: 3em 2em;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.counters > div {
+    display: flex;
+    gap: 3em;
+}
+
+.counter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+}
+
+.counter:not(:last-child)::before {
+    content: "";
+    background: var(--bmw-blue);
+    position: absolute;
+    height: 60px;
+    width: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -1.5em;
+}
+
+.counter h3 {
+    font-size: 3rem;
+    margin-bottom: 0.25em;
 }
 
 #end-slogan {
