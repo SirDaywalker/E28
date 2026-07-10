@@ -70,7 +70,6 @@ h2 {
     position: relative;
 }
 
-
 .holder {
     position: sticky;
     top: 0;
@@ -139,7 +138,7 @@ h2 {
     font-size: 4rem;
 }
 
-.info-banner h2, .counter h3, .counter h4, .counter span{
+.info-banner h2, .counter h3, .counter h4 {
     text-align: center;
     color: var(--font-dark);
 }
@@ -162,7 +161,7 @@ h2 {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 160px;
     height: 160px;
@@ -174,7 +173,7 @@ h2 {
     position: absolute;
     height: 60px;
     width: 2px;
-    top: 50%;
+    top: 25%;
     transform: translateY(-50%);
     right: -1.5em;
 }
@@ -194,8 +193,32 @@ h2 {
 
 footer {
     width: 100%;
-    height: 80px;
+    height: 60px;
+    padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+}
+
+footer ul {
+    display: flex;
+    align-self: center;
+    list-style: none;
+    gap: 16px;
+}
+
+footer svg {
+    height: 40px;
+    width: 40px;
+    fill: var(--font-light);
+    transition: fill 250ms ease;
+}
+
+footer svg:hover{
+    cursor: pointer;
+    fill: var(--bmw-blue);
+    transition: fill 250ms ease;
 }
 
 @media (max-width: 700px) {

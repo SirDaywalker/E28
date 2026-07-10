@@ -1,4 +1,4 @@
-const counters = [...document.querySelectorAll(".counters span")];
+const counters = [...document.querySelectorAll(".counters h3")];
 const container = document.querySelector(".counter");
 
 const TRIGGER_OFFSET = 200;
