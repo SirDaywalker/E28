@@ -18,55 +18,15 @@ body {
     background-color: var(--background-gray);
 }
 
-h1 {
-    width: 100%;
-    font-size: 10rem;
-    text-align: center;
-    letter-spacing: 0.025rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-#banner {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#banner > div {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    background-color: var(--font-light);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* M-Colors-Divider */
-#banner > div::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 25px;
-    background: linear-gradient(to right,
-            var(--bmw-blue) 0%,
-            var(--m-light-blue) 50%,
-            var(--m-red) 100%);
-}
-
-#banner > div > h1 {
-    color: var(--font-dark);
+h2, h3 {
+    font-family: 'Courier New', monospace;
+    font-size: 12pt;
+    color: var(--m-light-blue);
+    letter-spacing: 1.6px;
 }
 
 .vid {
-    height: calc(600vh + 4px);
+    height: 230vh;
     position: relative;
 }
 
@@ -86,172 +46,111 @@ h2 {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .story > div {
-    height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 24px;
 }
 
-.info-card {
-    width: 450px;
-    position: relative;
+.banner {
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 25px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.info-card h2 {
-    display: inline-block;
-    position: relative;
-}
-
-.info-card h2::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background: var(--bmw-blue);
-    transform: scaleX(0.5);
-    transform-origin: left;
-    margin-top: 8px;
-}
-
-
-.info-card ul {
-    padding-left: 20px;
-}
-
-.info-card li {
-    padding-top: 5px;
-}
-
-.info-banner {
-    width: 100%;
-    height: 50vh;
-    padding: 20px;
-    background-color: rgba(246, 246, 246, 0.975);
-}
-
-.info-banner h2 {
-    font-size: 4rem;
-}
-
-.info-banner h2, .counter h3, .counter h4 {
-    text-align: center;
-    color: var(--font-dark);
-}
-
-.counters {
-    padding: 3em 2em;
-    height: 30vh;
+    width: 788px;
     display: flex;
     flex-direction: column;
+    gap: 24px;
+    padding: 16px;
+}
+
+.headline {
+    display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.counters > div {
-    display: flex;
-    gap: 3em;
-}
-
-.counter {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 160px;
-    height: 160px;
-}
-
-.counter:not(:last-child)::before {
-    content: "";
-    background: var(--bmw-blue);
-    position: absolute;
-    height: 60px;
-    width: 2px;
-    top: 25%;
-    transform: translateY(-50%);
-    right: -1.5em;
-}
-
-.counter h3 {
-    font-size: 3rem;
-    margin-bottom: 0.25em;
-}
-
-#end-slogan {
-    text-shadow: 2px 1px 3px var(--font-dark);
-}
-
-#impressions {
-    border-top: 5px solid var(--font-light);
-    height: 100vh;
-    width: 100%;
-    /* display: flex; */
-}
-
-.impression-card {
-    height: 100%;
-    width: 90%;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.impression-card > div {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.impression-card > img {
-    width: 80%;
-    height: 100%;
-}
-
-#wrapper-footer {
-    height: 80px;
-}
-
-footer {
-    width: 100%;
-    height: 60px;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    align-self: center;
-    justify-content: flex-end;
-}
-
-footer ul {
-    display: flex;
-    align-self: center;
-    list-style: none;
     gap: 16px;
 }
 
-footer svg {
-    height: 40px;
-    width: 40px;
-    fill: var(--font-light);
-    transition: fill 250ms ease;
+.headline::before,
+.headline::after {
+    content: "";
+    height: 1px;
+    width: 48px;
+    background: var(--m-light-blue);
 }
 
-footer svg:hover{
-    cursor: pointer;
-    fill: var(--bmw-blue);
-    transition: fill 250ms ease;
+.headline h2 {
+    padding: 0 8px;
 }
 
-@media (max-width: 700px) {
-    h1 {
-        font-size: 6rem;
-    }
+.banner > h1 {
+    font-size: 63pt;
+}
+
+.banner > h1 > span {
+    color: var(--m-light-blue);
+    font-style: italic;
+}
+
+#faf {
+    background-color: var(--background-gray);
+    padding: 48px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#faf > img {
+    width: 400px;
+    height: 450px;
+}
+
+.card {
+    background-color: red;
+    width: 800px;
+    height: 450px;
+    padding: 48px;
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right,
+            var(--bmw-blue) 0%,
+            var(--bmw-blue) 33%,
+            var(--m-light-blue) 33%,
+            var(--m-light-blue) 67%,
+            var(--m-red) 67%,
+            var(--m-red) 100%);
+}
+
+.card > div > h2 {
+    color: var(--font-light);
+    font-family: sans-serif;
+    font-size: 30pt;
+}
+
+.card > .text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.specs {
+    padding-top: 24px;
+}
+
+.specs > div {
+    border-top: 1px solid var(--font-light);
+    width: 100%;
+    height: 50px;
 }
