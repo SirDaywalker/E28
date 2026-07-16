@@ -1,5 +1,5 @@
-const counters = [...document.querySelectorAll(".counters h3")];
-const container = document.querySelector(".counter");
+const counters = [...document.querySelectorAll(".spec-box span")];
+const container = document.querySelector("#specs");
 
 const TRIGGER_OFFSET = 200;
 const ANIMATION_DURATION = 2500;
@@ -27,16 +27,16 @@ function animateCounter(counter, target, duration) {
 
 function startAllCounters() {
     counters.forEach(counter => {
-        const target = parseInt(counter.dataset.count);
+        const target = parseFloat(counter.dataset.count);
         animateCounter(counter, target, ANIMATION_DURATION);
     });
 }
 
 function shouldActivate() {
     const triggerPoint =
-        container.offsetTop - container.offsetHeight - TRIGGER_OFFSET;
+        container.offsetTop - window.innerHeight + TRIGGER_OFFSET;
 
-    return pageYOffset > triggerPoint;
+    return window.pageYOffset > triggerPoint;
 }
 
 function handleScroll() {
@@ -53,7 +53,9 @@ function handleScroll() {
 }
 
 function resetAllCounters() {
-    counters.forEach(counter.innerText = "0");
+    counters.forEach(counter => {
+        counter.innerText = "0";
+    });
 }
 
 window.addEventListener("scroll", handleScroll);
