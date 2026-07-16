@@ -35,6 +35,7 @@ section {
 .vid {
     height: 230vh;
     position: relative;
+    padding: 0;
 }
 
 .holder {
