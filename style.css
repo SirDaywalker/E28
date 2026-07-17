@@ -120,7 +120,6 @@ section {
     border: 1px solid var(--border-gray);
     border-top: none;
     border-radius: 8px;
-    overflow: hidden;
 }
 
 .card::before {
@@ -130,6 +129,8 @@ section {
     left: 0;
     width: 100%;
     height: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     background: linear-gradient(to right,
             var(--bmw-blue) 0%,
             var(--bmw-blue) 33%,
@@ -343,4 +344,35 @@ section {
 
 .performance-card span {
     font-size: 45pt;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--border-gray);
+    padding-left: 48px;
+    gap: 48px;
+}
+
+.timeline-box {
+    max-width: 1350px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.spot {
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    background-color: var(--m-light-blue);
+    position: absolute;
+    top: 50%;
+    left: -55px;
+    filter: drop-shadow(0 0 10px var(--m-light-blue));
+}
+
+.timeline-box > h4 {
+    font-size: 18pt;
 }
