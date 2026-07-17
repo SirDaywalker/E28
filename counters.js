@@ -1,4 +1,4 @@
-const counters = [...document.querySelectorAll(".spec-box span")];
+const counters = [...document.querySelectorAll(".counter span")];
 const container = document.querySelector("#specs");
 
 const TRIGGER_OFFSET = 200;
