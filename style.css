@@ -382,3 +382,41 @@ section {
 #gallery > h3 {
     margin-bottom: 8px;
 }
+
+#tl{
+    grid-area: tl;
+}
+
+#tr{
+    grid-area: tr;
+}
+
+#ml{
+    grid-area: ml;
+}
+
+#mm{
+    grid-area: mm;
+}
+
+#mr{
+    grid-area: mr;
+}
+
+#bl{
+    grid-area: bl;
+}
+
+#br{
+    grid-area: br;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "tl tl tl tr"
+    "tl tl tl tr"
+    "ml mm mm mr"
+    "bl bl br br";
+}
