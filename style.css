@@ -20,21 +20,60 @@ body {
     background-color: var(--background-gray);
 }
 
+section {
+    background-color: var(--background-gray);
+    padding: 3rem;
+}
+
+section > h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+section > h2::after {
+    content: "";
+    height: 1px;
+    background: var(--border-gray);
+    flex-grow: 1;
+}
+
 .tagline {
     font-family: 'Courier New', monospace;
     color: var(--m-light-blue);
-    letter-spacing: 1.6px;
-    font-size: 12pt;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
-section {
-    background-color: var(--background-gray);
-    padding: 48px;
+h1 {
+    font-size: 5.25rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+ h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    color: var(--m-light-blue);
+    letter-spacing: 1.6px;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-span {
+    font-style: italic;
+    color: var(--m-light-blue);
 }
 
 .vid {
-    height: 230vh;
+    height: 220vh;
     position: relative;
     padding: 0;
 }
@@ -56,67 +95,61 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .story > div {
-    width: 100%;
+    width: calc(100% - 6rem);
+    height: calc(100% - 6rem);
     display: flex;
-    align-items: center;
-    padding: 48px;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 12rem;
+    padding: 3rem;
 }
 
 .banner {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 25px;
-    width: 788px;
+    max-width: 788px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    padding: 16px;
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
 }
 
 .headline {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .headline::before,
 .headline::after {
     content: "";
     height: 1px;
-    width: 48px;
+    width: 3rem;
     background: var(--m-light-blue);
 }
 
 .headline h2 {
-    padding: 0 8px;
-}
-
-.banner > h1 {
-    font-size: 63pt;
-}
-
-.banner > h1 > span {
-    color: var(--m-light-blue);
-    font-style: italic;
-}
+    padding: 0 0.5rem;
+} 
 
 #faf {
-    background-color: var(--background-gray);
-    padding: 48px;
-    display: flex;
-    justify-content: center;
-    gap: 24px;
+    width: calc(100% - 6rem);
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 3rem;
+}
+
+#faf > .card {
+    height: 354px;
 }
 
 .card {
     background-color: var(--card-gray);
     max-width: 800px;
-    padding: 48px;
+    padding: 3rem;
     position: relative;
     border: 1px solid var(--border-gray);
     border-top: none;
@@ -141,21 +174,14 @@ section {
             var(--m-red) 100%);
 }
 
-
-.card > div > h2 {
-    color: var(--font-light);
-    font-family: sans-serif;
-    font-size: 30pt;
-}
-
 .card > .text-section {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 1.5rem;
 }
 
 .modell-data {
-    padding-top: 48px;
+    padding-top: 3rem;
 }
 
 .modell-data > div {
@@ -164,17 +190,17 @@ section {
     border-top: 1px solid var(--border-gray);
     width: 100%;
     height: 50px;
-    padding-top: 48px;
+    padding-top: 3rem;
 }
 
 .modell-data-box > h3 {
     font-family: 'Courier New', monospace;
-    font-size: 12pt;
+    font-size: 1rem;
     color: var(--font-dark);
 }
 
 .modell-data-box > p {
-    font-size: 15pt;
+    font-size: 1.25rem;
     color: var(--m-light-blue);
 }
 
@@ -196,44 +222,18 @@ section {
 }
 
 .img-card .text-section {
-    width: calc(100% - 48px);
-    height: calc(100% - 48px);
+    width: calc(100% - 4rem);
+    height: calc(100% - 4rem);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 12px;
-    padding: 24px;
+    gap: 1rem;
+    padding: 2rem;
     border-radius: 8px;
 }
 
 .img-card h2 {
-    font-family: sans-serif;
-    color: var(--font-light);
-}
-
-.img-card p {
-    color: var(--font-dark);
-}
-
-#specs > h2,
-#history > h2,
-#gallery > h3 {
-    color: var(--font-light);
-    font-family: sans-serif;
-    font-size: 30pt;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 48px;
-}
-
-#specs > h2::after,
-#history > h2::after,
-#gallery > h3::after {
-    content: "";
-    height: 1px;
-    background: var(--border-gray);
-    flex-grow: 1;
+    font-size: 1.5rem;
 }
 
 #specs > div {
@@ -243,35 +243,28 @@ section {
 }
 
 .specs {
-    width: 1322px;
+    max-width: 1322px;
     display: flex;
     justify-content: space-between;
-    gap: 48px;
+    gap: 3rem;
 }
 
 .left-text {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 3rem;
 }
 
 .specs .text-section {
+    max-width: 290px;
+    background-color: var(--card-gray);
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    background-color: var(--card-gray);
-    max-width: 290px;
-    padding: 24px;
+    gap: 0.5rem;
+    padding: 1.5rem;
     border: 1px solid var(--border-gray);
     border-left: 4px solid var(--m-light-blue);
     border-radius: 8px;
-}
-
-.specs .text-section > h3 {
-    color: var(--font-light);
-    font-family: sans-serif;
-    letter-spacing: 0;
-    font-size: 15pt;
 }
 
 .specs > div > img{
@@ -284,69 +277,57 @@ section {
 .spec-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 1rem;
 }
 
 .spec-box, .performance-card {
     background-color: var(--card-gray);
     min-width: 350px;
-    padding: 16px;
+    padding: 1rem;
     border: 1px solid var(--border-gray);
     border-radius: 8px;
 }
 
-.spec-box > h4 {
-    font-family: 'Courier New', monospace;
-    font-size: 12pt;
-    color: var(--m-light-blue);
-    letter-spacing: 1.6px;
-    margin-bottom: 24px;
-}
-
 .counter {
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
 }
 
 .counter > span,
 .counter > p {
-    font-size: 24pt;
+    font-size: 2rem;
+}
+
+#performance-benchmarks {
+    padding: 0 3rem;
 }
 
 #performance-benchmarks > h3 {
     font-family: sans-serif;
     color: var(--font-light);
-    font-size: 18pt;
+    font-size: 1.5rem;
     text-align: center;
 }
 
 #performance-benchmarks > div {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 48px;
-    padding-top: 48px;
-}
-
-.performance-card > h4 {
-    font-family: 'Courier New', monospace;
-    font-size: 12pt;
-    color: var(--m-light-blue);
-    letter-spacing: 1.6px;
-    margin-bottom: 24px;
+    gap: 3rem;
+    padding-top: 3rem;
 }
 
 .performance-card > div {
     display: flex;
     align-items: end;
-    gap: 8px;
+    gap: 0.5rem;
 }
 
 .performance-card p {
-    font-size: 18pt;
+    font-size: 1.5rem;
 }
 
 .performance-card span {
-    font-size: 45pt;
+    font-size: 4rem;
 }
 
 .timeline {
@@ -354,15 +335,15 @@ section {
     display: flex;
     flex-direction: column;
     border-left: 1px solid var(--border-gray);
-    padding-left: 48px;
-    gap: 48px;
+    padding-left: 3rem;
+    gap: 3rem;
 }
 
 .timeline-box {
     max-width: 1350px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75rem;
 }
 
 .spot {
@@ -377,11 +358,11 @@ section {
 }
 
 .timeline-box > h3 {
-    font-size: 18pt;
+    font-size: 1.5rem;
 }
 
-#gallery > h3 {
-    margin-bottom: 8px;
+#gallery > h2 {
+    margin-bottom: 0.5rem;
 }
 
 #tl{
@@ -413,7 +394,7 @@ section {
 }
 
 .gallery {
-    margin: 32px 0 64px 0;
+    margin: 2rem 0 4rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -421,7 +402,7 @@ section {
     "tl tl tl tr"
     "ml mm mm mr"
     "bl bl br br";
-    gap: 16px;
+    gap: 1rem;
 }
 
 .gallery > img {
@@ -444,7 +425,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 6px;
     background: linear-gradient(to right,
             var(--bmw-blue) 0%,
             var(--bmw-blue) 33%,
@@ -455,8 +436,8 @@ section {
 }
 
 #quote-section > h1{
-    margin: 32px 0;
-    font-size: 42pt;
+    margin: 2rem 0;
+    font-size: 4rem;
     text-align: center;
 }
 
@@ -465,34 +446,28 @@ section {
     text-align: center;
 }
 
-#quote-section > p > span{
-    font-style: italic;
-    color: var(--m-light-blue);
-}
-
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
+    padding: 1rem;
     border-top: 1px solid var(--border-gray);
 }
 
-
 footer > p {
     font-family: monospace;
-    font-size: 7pt;
+    font-size: 0.6rem;
     color: var(--font-dark);
 }
 
 footer > div {
     display: flex;
-    gap: 16px;
+    gap: 1rem;
 }
 
 footer svg {
-    height: 32px;
-    width: 32px;
+    height: 2rem;
+    width: 2rem;
     fill: var(--font-light);
     transition: fill 250ms ease-in-out;
 }
