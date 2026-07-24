@@ -20,11 +20,12 @@ body {
     background-color: var(--background-gray);
 }
 
-h2, h3 {
+.tagline {
     font-family: 'Courier New', monospace;
-    font-size: 12pt;
     color: var(--m-light-blue);
     letter-spacing: 1.6px;
+    font-size: 12pt;
+    font-weight: bold;
 }
 
 section {
@@ -166,7 +167,7 @@ section {
     padding-top: 48px;
 }
 
-.modell-data-box > h4 {
+.modell-data-box > h3 {
     font-family: 'Courier New', monospace;
     font-size: 12pt;
     color: var(--font-dark);
@@ -375,7 +376,7 @@ section {
     filter: drop-shadow(0 0 10px var(--m-light-blue));
 }
 
-.timeline-box > h4 {
+.timeline-box > h3 {
     font-size: 18pt;
 }
 
@@ -456,6 +457,7 @@ section {
 #quote-section > h1{
     margin: 32px 0;
     font-size: 42pt;
+    text-align: center;
 }
 
 #quote-section > p {
@@ -475,6 +477,7 @@ footer {
     padding: 16px;
     border-top: 1px solid var(--border-gray);
 }
+
 
 footer > p {
     font-family: monospace;
