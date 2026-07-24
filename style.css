@@ -412,6 +412,7 @@ section {
 }
 
 .gallery {
+    margin-top: 32px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -419,4 +420,11 @@ section {
     "tl tl tl tr"
     "ml mm mm mr"
     "bl bl br br";
+    gap: 16px;
+}
+
+.gallery > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
