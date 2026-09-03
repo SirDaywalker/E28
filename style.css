@@ -531,10 +531,9 @@ footer {
     border-top: 1px solid var(--border-gray);
 }
 
-footer > p {
-    font-family: monospace;
-    font-size: 0.6rem;
-    color: var(--font-dark);
+footer > canvas {
+    width: 85%;
+    height: 30px;
 }
 
 footer > div {
