@@ -26,17 +26,3 @@
   }
  
   draw();
-
-
-function resizeCanvas() {
-  const dpr = window.devicePixelRatio;
-  const rect = canvas.getBoundingClientRect();
-
-  canvas.width = rect.width * dpr;
-  canvas.height = rect.height * dpr;
-
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-}
-
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
