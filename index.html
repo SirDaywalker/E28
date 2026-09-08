@@ -100,11 +100,11 @@
                                 Handarbeit, mit einem M88/3 Motor ausgestatteten, gefertigten M5 vor.
                             </p>
                         </div>
-                        <img src="./assets/BMW-Logo.svg" alt="Der BMW M88/3 Motor" height="250" width="343">
 
-                        <audio src="./assets/#" controls>
-
-                        </audio>
+                        <video controls preload="auto" playsinline>
+                            <source src="./assets/BMWShot.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
 
                     <div class="spec-grid">
@@ -273,6 +273,7 @@
             dass wahre <span class="highlight-span">Freude am Fahren</span> nicht digital simuliert, sondern erlebt
             wird.
         </p>
+        <audio id="audio" src="./assets/ding.mp3"></audio>
     </section>
 
     <footer>
@@ -300,6 +301,7 @@
             </a>
         </div>
     </footer>
+    <script src="./playAudio.js"></script>
     <script src="./counters.js"></script>
     <script src="./marquee.js"></script>
 </body>

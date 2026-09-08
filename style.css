@@ -303,7 +303,7 @@ h4 {
     border-radius: 8px;
 }
 
-.left-text > img {
+.left-text > video {
     width: 100%;
     object-fit: contain;
     border: 1px solid var(--border-gray);
