@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="no-index">
-    <meta name="description" content="Eineliebhaberseite für den BMW E28, ein Autobahnstar der 80er der Extraklasse">
+    <meta name="description" content="Eine Liebhaberseite für den BMW E28, ein Autobahnstar der Extraklasse in den 80ern.">
     <meta name="keywords" content="BMW, E28, 520i, cars, oldtimer">
     <meta name="author" content="Jannis Dickel">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
@@ -16,7 +16,12 @@
 <body>
     <section class="vid">
         <div class="holder">
-            <video src="./assets/e28.mp4" preload="auto" autoplay muted loop playsinline></video>
+            <video preload="auto" autoplay muted loop playsinline>
+                <source src="./assets/e28.mp4" type="video/mp4">
+                <source src="./assets/e28.webm" type="video/webm">
+                <source src="./assets/e28.avi" type="video/avi">
+                Dieser Browser unterstützt keine Video-tags!
+            </video>
         </div>
         <div class="story">
             <div>
@@ -70,8 +75,8 @@
                     </div>
 
                     <figure class="img-card">
-                        <div>
-                            <figcaption class="text-section">
+                        <div></div>
+                        <figcaption class="text-section">
                                 <h2>Ikonische Doppelniere</h2>
                                 <p>
                                     Aggressiv, kraftvoll und elegant. <br>
@@ -79,7 +84,6 @@
                                     von klassischer Eleganz zu moderner, kraftvoller Formensprache.
                                 </p>
                             </figcaption>
-                        </div>
                     </figure>
 
                 </div>
@@ -103,7 +107,9 @@
 
                         <video controls preload="auto" playsinline>
                             <source src="./assets/BMWShot.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
+                            <source src="./assets/BMWShot.webm" type="video/webm">
+                            <source src="./assets/BMWShot.avi" type="video/avi">
+                            Dieser Browser unterstützt keine Video-tags!
                         </video>
                     </div>
 
@@ -252,13 +258,13 @@
             </p>
 
             <div class="gallery">
-                <img id="tl" src="./assets/gallery-full.jpg" alt="">
-                <img id="tr" src="./assets/gallery-front.jpg" alt="">
-                <img id="ml" src="./assets/gallery-interior.webp" alt="">
-                <img id="mm" src="./assets/gallery-side.jpeg" alt="">
-                <img id="mr" src="./assets/gallery-e28-m5-logo.jpg" alt="">
-                <img id="bl" src="./assets/gallery-sharknose.jpg" alt="">
-                <img id="br" src="./assets/gallery-e28-alpina.jpg" alt="">
+                <img id="tl" src="./assets/gallery-full.jpg" alt="Der BMW E28 im Profil">
+                <img id="tr" src="./assets/gallery-front.jpg" alt="Die Front des E28">
+                <img id="ml" src="./assets/gallery-interior.webp" alt="Das Interior des E28">
+                <img id="mm" src="./assets/gallery-side.jpeg" alt="Der meistverkaufte E28, ein 518i">
+                <img id="mr" src="./assets/gallery-e28-m5-logo.jpg" alt="Der erste M">
+                <img id="bl" src="./assets/gallery-sharknose.jpg" alt="Die Haifischnase des E28">
+                <img id="br" src="./assets/gallery-e28-alpina.jpg" alt="Der E28 Alpina von hinten">
             </div>
         </section>
     </div>
@@ -273,7 +279,12 @@
             dass wahre <span class="highlight-span">Freude am Fahren</span> nicht digital simuliert, sondern erlebt
             wird.
         </p>
-        <audio id="audio" src="./assets/ding.mp3"></audio>
+        <audio id="audio">
+            <source src="./assets/ding.mp3" type="audio/mp3">
+            <source src="./assets/ding.ogg" type="audio/ogg">
+            <source src="./assets/ding.wav" type="audio/wav">
+            Dieser Browser unterstützt keine Audio-tags!
+        </audio>
     </section>
 
     <footer>
