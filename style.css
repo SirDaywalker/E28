@@ -169,7 +169,7 @@ h4 {
 
 .card {
     background-color: var(--card-gray);
-    max-width: 800px;
+    max-width: 788px;
     padding: var(--space-m);
     position: relative;
     border: 1px solid var(--border-gray);
@@ -200,8 +200,11 @@ h4 {
 .card > .text-section {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     margin-bottom: var(--space-m);
+}
+
+.text-section > h2 {
+    margin-bottom: 1.5rem;
 }
 
 .modell-data {
@@ -516,7 +519,7 @@ h4 {
     );
 }
 
-#quote-section > h1 {
+#quote-section > h2 {
     margin: var(--space-m) 0;
     font-size: clamp(2rem, 1.5rem + 2vw, 4rem);
     text-align: center;
