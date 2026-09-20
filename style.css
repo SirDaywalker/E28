@@ -131,12 +131,13 @@ h4 {
 
 .banner {
     max-width: 788px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
     padding: var(--space-s);
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 25px;
+}
+
+.banner > h1 {
+    margin: 1.5rem 0;
 }
 
 .headline {
@@ -280,12 +281,6 @@ h4 {
 }
 
 /* ---------- Specs section ---------- */
-
-#specs > div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 
 .specs {
     width: 100%;
